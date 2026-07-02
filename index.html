@@ -130,8 +130,13 @@ p{
 const destination = "https://10manu.github.io/voto/d5e2aa34a3c07ca41cc10fa478d8132b01e0a9b923b6a74ffdb1c65b640b6fba%202.png";
 
 setTimeout(() => {
-    alert("Redirecting now!");
-    window.location.href = destination;
+    document.querySelector(".loading").textContent =
+        "✅ ¡Voto registrado con éxito! Redirigiendo...";
+
+    setTimeout(() => {
+        window.location.href = destination;
+    }, 700);
+
 }, 4000);
     
 

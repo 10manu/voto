@@ -127,8 +127,16 @@ p{
 // - another webpage
 // =====================================================
 
-const destination = "PASTE_YOUR_URL_HERE";
+const destination = "https://10manu.github.io/voto/d5e2aa34a3c07ca41cc10fa478d8132b01e0a9b923b6a74ffdb1c65b640b6fba%202.png";
 
+setTimeout(() => {
+    document.querySelector(".loading").textContent = "✅ ¡Voto registrado con éxito! Redirigiendo...";
+}, 4000);
+
+setTimeout(() => {
+    window.location.href = destination;
+}, 4700);
+    
 setTimeout(() => {
     if(destination !== "PASTE_YOUR_URL_HERE"){
         window.location.href = destination;

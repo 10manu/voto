@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Registrando tu voto...</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(135deg,#0f172a,#1e3a8a);
+    color:white;
+}
+
+.card{
+    width:90%;
+    max-width:420px;
+    background:rgba(255,255,255,.08);
+    backdrop-filter:blur(14px);
+    border:1px solid rgba(255,255,255,.15);
+    border-radius:18px;
+    padding:40px;
+    text-align:center;
+    box-shadow:0 20px 50px rgba(0,0,0,.35);
+}
+
+.check{
+    width:70px;
+    height:70px;
+    margin:auto;
+    margin-bottom:25px;
+    border-radius:50%;
+    background:#2563eb;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:34px;
+}
+
+h1{
+    font-size:28px;
+    margin-bottom:12px;
+    font-weight:700;
+}
+
+p{
+    opacity:.85;
+    margin-bottom:30px;
+}
+
+.progress-container{
+    width:100%;
+    height:10px;
+    background:rgba(255,255,255,.15);
+    border-radius:50px;
+    overflow:hidden;
+}
+
+.progress-bar{
+    width:0%;
+    height:100%;
+    background:linear-gradient(90deg,#38bdf8,#60a5fa,#2563eb);
+    border-radius:50px;
+    animation:fillBar 4s linear forwards;
+}
+
+@keyframes fillBar{
+    from{
+        width:0%;
+    }
+    to{
+        width:100%;
+    }
+}
+
+.loading{
+    margin-top:18px;
+    font-size:14px;
+    opacity:.8;
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+
+    <div class="check">🗳️</div>
+
+    <h1>Registrando tu voto...</h1>
+
+    <p>Por favor espera unos segundos mientras procesamos tu información.</p>
+
+    <div class="progress-container">
+        <div class="progress-bar"></div>
+    </div>
+
+    <div class="loading">
+        Verificando...
+    </div>
+
+</div>
+
+<script>
+
+// =====================================================
+// PASTE YOUR DESTINATION URL BELOW
+//
+// Example:
+// const destination = "https://your-image-host.com/myimage.jpg";
+//
+// You can use:
+// - an image URL
+// - an Imgur link
+// - Dropbox direct link
+// - Google Drive direct download link
+// - another webpage
+// =====================================================
+
+const destination = "PASTE_YOUR_URL_HERE";
+
+setTimeout(() => {
+    if(destination !== "PASTE_YOUR_URL_HERE"){
+        window.location.href = destination;
+    }
+}, 4000);
+
+</script>
+
+</body>
+</html>
